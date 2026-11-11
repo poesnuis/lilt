@@ -1,0 +1,12 @@
+[
+  {
+    "modid": "lilt",
+    "name": "Lilt Client",
+    "description": "A measured, configurable client experience for Minecraft 1.12.2. Vanilla mechanics, considered design.",
+    "version": "${version}",
+    "mcversion": "1.12.2",
+    "authorList": ["Lilt contributors"],
+    "credits": "Open Sans by the Open Sans Project; Minecraft Forge and MCP.",
+    "clientSideOnly": true
+  }
+]

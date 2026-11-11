@@ -1,0 +1,107 @@
+buildscript {
+    repositories {
+        maven { url = 'https://maven.minecraftforge.net/' }
+        mavenCentral()
+    }
+    dependencies { classpath 'net.minecraftforge.gradle:ForgeGradle:3.0.197' }
+}
+apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'eclipse'
+
+version = '1.0.0'
+group = 'dev.lilt'
+archivesBaseName = 'lilt-client-1.12.2'
+sourceCompatibility = targetCompatibility = '1.8'
+
+minecraft {
+    mappings channel: 'stable', version: '39-1.12'
+    runs {
+        client {
+            workingDirectory project.file('run')
+            property 'forge.logging.console.level', 'info'
+            property 'fml.coreMods.load', 'dev.lilt.core.LiltLoadingPlugin'
+        }
+    }
+}
+repositories { mavenCentral() }
+sourceSets {
+    probe { java.srcDir 'src/probe/java' }
+    probeTest { java.srcDir 'src/probeTest/java' }
+}
+configurations { officialForgeRuntime }
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2860'
+    // ForgeGradle 3 otherwise injects a newer merge tool's BUKKIT Side enum,
+    // which crashes unmodified Forge 1.12.2 during channel registration.
+    implementation(fg.deobf('net.minecraftforge:mergetool:0.2.3.3:forge')) { force = true; transitive = false }
+    officialForgeRuntime('net.minecraftforge:forge:1.12.2-14.23.5.2860:universal') { transitive = false }
+    testImplementation 'junit:junit:4.13.2'
+    probeCompile 'org.ow2.asm:asm:5.2'
+}
+tasks.withType(JavaCompile) { options.encoding = 'UTF-8' }
+processResources {
+    inputs.property 'version', project.version
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+        expand(version: project.version)
+    }
+    from(sourceSets.main.resources.srcDirs) { exclude 'mcmod.info' }
+}
+jar {
+    from('licenses') { into 'META-INF/licenses' }
+    from('LICENSE') { into 'META-INF' }
+    manifest {
+        attributes 'Specification-Title': 'Lilt Client',
+            'Specification-Version': '1',
+            'Implementation-Version': project.version,
+            'FMLCorePlugin': 'dev.lilt.core.LiltLoadingPlugin',
+            'FMLCorePluginContainsFMLMod': 'true',
+            'ForceLoadAsMod': 'true',
+            'ModSide': 'CLIENT'
+    }
+}
+jar.finalizedBy('reobfJar')
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+artifacts { archives sourcesJar }
+task probeJar(type: Jar, dependsOn: probeClasses) {
+    archiveName = 'lilt-benchmark-probe-1.0.0.jar'
+    from sourceSets.probe.output
+    from { configurations.probeRuntime.collect { it.isDirectory() ? it : zipTree(it) } }
+    from('licenses/ASM-LICENSE.txt') { into 'META-INF' }
+    manifest { attributes 'Premain-Class': 'dev.lilt.probe.ProbeAgent' }
+}
+build.dependsOn probeJar
+task probeSmokeTest(type: JavaExec, dependsOn: [probeJar, probeTestClasses]) {
+    main = 'bib'
+    classpath = sourceSets.probeTest.runtimeClasspath
+    args "$buildDir/probe-test"
+    doFirst {
+        delete "$buildDir/probe-test"
+        jvmArgs "-javaagent:${probeJar.archivePath}=output=$buildDir/probe-test;label=smoke;warmup=0;seconds=1"
+    }
+}
+check.dependsOn probeSmokeTest
+
+// FG3's binary-only mapped JAR can still contain the merge tool's three-value
+// Side enum, even with the dependency pinned. Put the two original Forge
+// annotation classes first for development launches. Never ship these classes.
+task prepareLegacyRuntime(type: Copy) {
+    from { configurations.officialForgeRuntime.collect { zipTree(it) } }
+    include 'net/minecraftforge/fml/relauncher/Side.class'
+    include 'net/minecraftforge/fml/relauncher/SideOnly.class'
+    into "$buildDir/legacy-runtime"
+}
+tasks.withType(JavaExec).all {
+    if (name == 'runClient') {
+        dependsOn prepareLegacyRuntime
+        doFirst {
+            classpath = files("$buildDir/legacy-runtime") + classpath.filter {
+                // Merge tool implementation dependencies are not game dependencies.
+                !it.name.matches('asm-(tree-|util-|analysis-|commons-)?6\\..*\\.jar')
+            }
+        }
+    }
+}

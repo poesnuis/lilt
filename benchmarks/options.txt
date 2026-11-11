@@ -1,0 +1,14 @@
+renderDistance:16
+fancyGraphics:true
+ao:2
+mipmapLevels:4
+particles:0
+renderClouds:true
+maxFps:260
+enableVsync:false
+guiScale:3
+useVbo:true
+entityShadows:true
+resourcePacks:[]
+pauseOnLostFocus:false
+tutorialStep:none

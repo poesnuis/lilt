@@ -1,0 +1,165 @@
+{
+  "date": "2026-11-11",
+  "instrument": "Same external loop-entry Java agent in every comparison run",
+  "runOrder": [
+    "vanilla-coast-1",
+    "lilt-coast-1",
+    "vanilla-coast-2",
+    "lilt-coast-2",
+    "vanilla-coast-3",
+    "lilt-coast-3",
+    "forge-coast-1"
+  ],
+  "warmupSeconds": 60,
+  "captureSeconds": 30,
+  "java": "Temurin 1.8.0_512-b09",
+  "jvmMemoryArguments": [
+    "-Xms512M",
+    "-Xmx2G"
+  ],
+  "display": "1440x900 Xvfb, windowed, software rendering",
+  "cpuAffinity": [
+    0,
+    1,
+    2
+  ],
+  "cpuQuota": "200000 100000",
+  "memoryLimitBytes": 8589934592,
+  "optionsSha256": "04a31a9eb0b08a43145b3bfc6fa80f09667737e718b324415ff29f92cde25895",
+  "artifacts": {
+    "lilt-benchmark-probe-1.0.0.jar": "3e6154cd5d4d684bcc74fa7a6d9f0827af86a09462406d119bc94935c2fac64c",
+    "lilt-client-1.12.2-1.0.0-sources.jar": "4ffab655b3fb344735e3caebfbdf78e599f36a080247a28bdf2c0308c02319bc",
+    "lilt-client-1.12.2-1.0.0.jar": "2d7dcb120b0a745f1beb513c2ece69364d3c41b5cf082967e85c4f737c36cb47"
+  },
+  "tests": [
+    {
+      "name": "dev.lilt.config.ConfigStoreTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "dev.lilt.core.FontWidthTransformerTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "dev.lilt.core.WidthCacheTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "dev.lilt.metrics.FrameStatisticsTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0"
+    }
+  ],
+  "otherChecks": [
+    "Java agent actual-JVM smoke test passed",
+    "Python analyzer unit test passed",
+    "Actual Minecraft font parity: 72 checks passed",
+    "Installer fresh copy, idempotence, backup passed",
+    "Production Studio/editor/world launch and resource reload passed"
+  ],
+  "runs": [
+    {
+      "label": "vanilla-coast-1",
+      "frameCsvSha256": "7134f1cbeba552a8a06217212cbffacf6c541034e17eda43765d447407e474fb",
+      "systemCsvSha256": "dc61fa5b52695b8a5c29ed46ad1ce28b0c27708595a7c774d88211728c2a7059",
+      "observerMessages": [
+        "[Lilt probe] vanilla-coast-1: warmup 60 s, capture 30 s. Output: /workspace/work/benchmarks",
+        "[Lilt probe] Observing Minecraft 1.12.2 game-loop entry.",
+        "[17:17:51] [Client thread/INFO]: [STDOUT]: [Lilt probe] World entered; warming up.",
+        "[17:18:51] [Client thread/INFO]: [STDOUT]: [Lilt probe] Recording.",
+        "[17:19:22] [Lilt baseline probe/INFO]: [STDOUT]: [Lilt probe] Saved 217 intervals to /workspace/work/benchmarks/vanilla-coast-1-frames.csv"
+      ]
+    },
+    {
+      "label": "lilt-coast-1",
+      "frameCsvSha256": "94debab31b15cae70f36630c4a3aef6482b9a7f0976bc3ae6021625a84919b74",
+      "systemCsvSha256": "19a58bece64438f3e40504eca553f41c7a9fe59565602c03d85309400d03125f",
+      "observerMessages": [
+        "[Lilt probe] lilt-coast-1: warmup 60 s, capture 30 s. Output: /workspace/work/benchmarks",
+        "[17:19:52] [main/INFO] [STDOUT]: [dev.lilt.probe.ProbeAgent$1:transform:50]: [Lilt probe] Observing Minecraft 1.12.2 game-loop entry.",
+        "[17:20:34] [Client thread/INFO] [STDOUT]: [dev.lilt.probe.FrameProbe:frame:53]: [Lilt probe] World entered; warming up.",
+        "[17:21:34] [Client thread/INFO] [STDOUT]: [dev.lilt.probe.FrameProbe:frame:56]: [Lilt probe] Recording.",
+        "[17:22:04] [Lilt baseline probe/INFO] [STDOUT]: [dev.lilt.probe.FrameProbe:write:94]: [Lilt probe] Saved 237 intervals to /workspace/work/benchmarks/lilt-coast-1-frames.csv"
+      ],
+      "enabledModules": [
+        "fps",
+        "text_cache"
+      ]
+    },
+    {
+      "label": "vanilla-coast-2",
+      "frameCsvSha256": "22e523406c487d1ad5fe3535e539199d083f64e746f55a7b16fe02cf52a42f83",
+      "systemCsvSha256": "5e0736099c9c3915923f007988e5aa3ba4f8a505974ad909839ba03ca4f682e6",
+      "observerMessages": [
+        "[Lilt probe] vanilla-coast-2: warmup 60 s, capture 30 s. Output: /workspace/work/benchmarks",
+        "[Lilt probe] Observing Minecraft 1.12.2 game-loop entry.",
+        "[17:22:38] [Client thread/INFO]: [STDOUT]: [Lilt probe] World entered; warming up.",
+        "[17:23:38] [Client thread/INFO]: [STDOUT]: [Lilt probe] Recording.",
+        "[17:24:09] [Lilt baseline probe/INFO]: [STDOUT]: [Lilt probe] Saved 217 intervals to /workspace/work/benchmarks/vanilla-coast-2-frames.csv"
+      ]
+    },
+    {
+      "label": "lilt-coast-2",
+      "frameCsvSha256": "500ee5e8b2aab3fe529b5209920f6f5c49b8432e2d63b30f05e1f92c513bfc1f",
+      "systemCsvSha256": "389596472283dec7c16c2ab90d95f5c3d807de1074873e893e9a0d563318152e",
+      "observerMessages": [
+        "[Lilt probe] lilt-coast-2: warmup 60 s, capture 30 s. Output: /workspace/work/benchmarks",
+        "[17:24:27] [main/INFO] [STDOUT]: [dev.lilt.probe.ProbeAgent$1:transform:50]: [Lilt probe] Observing Minecraft 1.12.2 game-loop entry.",
+        "[17:25:03] [Client thread/INFO] [STDOUT]: [dev.lilt.probe.FrameProbe:frame:53]: [Lilt probe] World entered; warming up.",
+        "[17:26:03] [Client thread/INFO] [STDOUT]: [dev.lilt.probe.FrameProbe:frame:56]: [Lilt probe] Recording.",
+        "[17:26:34] [Lilt baseline probe/INFO] [STDOUT]: [dev.lilt.probe.FrameProbe:write:94]: [Lilt probe] Saved 234 intervals to /workspace/work/benchmarks/lilt-coast-2-frames.csv"
+      ],
+      "enabledModules": [
+        "fps",
+        "text_cache"
+      ]
+    },
+    {
+      "label": "vanilla-coast-3",
+      "frameCsvSha256": "64dc783faef29db22363b4346d5a43308bd52e55e18e2d4d927ffba2c4184f08",
+      "systemCsvSha256": "358b5be3ec08ac8685d0e3ede942f66eeae5b57171100763c3eaf3294d95c63c",
+      "observerMessages": [
+        "[Lilt probe] vanilla-coast-3: warmup 60 s, capture 30 s. Output: /workspace/work/benchmarks",
+        "[Lilt probe] Observing Minecraft 1.12.2 game-loop entry.",
+        "[17:27:08] [Client thread/INFO]: [STDOUT]: [Lilt probe] World entered; warming up.",
+        "[17:28:08] [Client thread/INFO]: [STDOUT]: [Lilt probe] Recording.",
+        "[17:28:39] [Lilt baseline probe/INFO]: [STDOUT]: [Lilt probe] Saved 204 intervals to /workspace/work/benchmarks/vanilla-coast-3-frames.csv"
+      ]
+    },
+    {
+      "label": "lilt-coast-3",
+      "frameCsvSha256": "21ee31d962517669e26f4e93b35f2f097b4888a301033591fd4e4dfb7cad06da",
+      "systemCsvSha256": "03b04bf63a890e20146060483f8ab617535592f766f7b9f301371e66a82dde96",
+      "observerMessages": [
+        "[Lilt probe] lilt-coast-3: warmup 60 s, capture 30 s. Output: /workspace/work/benchmarks",
+        "[17:28:56] [main/INFO] [STDOUT]: [dev.lilt.probe.ProbeAgent$1:transform:50]: [Lilt probe] Observing Minecraft 1.12.2 game-loop entry.",
+        "[17:29:35] [Client thread/INFO] [STDOUT]: [dev.lilt.probe.FrameProbe:frame:53]: [Lilt probe] World entered; warming up.",
+        "[17:30:35] [Client thread/INFO] [STDOUT]: [dev.lilt.probe.FrameProbe:frame:56]: [Lilt probe] Recording.",
+        "[17:31:06] [Lilt baseline probe/INFO] [STDOUT]: [dev.lilt.probe.FrameProbe:write:94]: [Lilt probe] Saved 244 intervals to /workspace/work/benchmarks/lilt-coast-3-frames.csv"
+      ],
+      "enabledModules": [
+        "fps",
+        "text_cache"
+      ]
+    },
+    {
+      "label": "forge-coast-1",
+      "frameCsvSha256": "0ce2bdf6d6255106766c07279e60bbe3ad5299ef687d9bc1a004dbddad69b941",
+      "systemCsvSha256": "7f3cb15e57a5bcd62bdc3ae98b005411ceb94aa5b17e1616ced68270a7772eb8",
+      "observerMessages": [
+        "[Lilt probe] forge-coast-1: warmup 60 s, capture 30 s. Output: /workspace/work/benchmarks",
+        "[17:31:30] [main/INFO] [STDOUT]: [dev.lilt.probe.ProbeAgent$1:transform:50]: [Lilt probe] Observing Minecraft 1.12.2 game-loop entry.",
+        "[17:32:07] [Client thread/INFO] [STDOUT]: [dev.lilt.probe.FrameProbe:frame:53]: [Lilt probe] World entered; warming up.",
+        "[17:33:07] [Client thread/INFO] [STDOUT]: [dev.lilt.probe.FrameProbe:frame:56]: [Lilt probe] Recording.",
+        "[17:33:37] [Lilt baseline probe/INFO] [STDOUT]: [dev.lilt.probe.FrameProbe:write:94]: [Lilt probe] Saved 233 intervals to /workspace/work/benchmarks/forge-coast-1-frames.csv"
+      ]
+    }
+  ]
+}

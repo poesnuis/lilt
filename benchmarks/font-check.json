@@ -1,0 +1,29 @@
+{
+  "installed": true,
+  "parityChecks": 72,
+  "method": "Actual Minecraft FontRenderer, 128 repeated scoreboard-style strings, 100000 warmup calls and 500000 timed lookups per sample; five alternating-order rounds.",
+  "scope": "Text-width microbenchmark only. This does not establish whole-game FPS improvement. Run deliberately; it briefly blocks the game thread.",
+  "java": "1.8.0_512-b09",
+  "rounds": [
+    {
+      "cachedNsPerLookup": 128.864284,
+      "uncachedNsPerLookup": 2738.376416
+    },
+    {
+      "uncachedNsPerLookup": 3818.605574,
+      "cachedNsPerLookup": 37.858478
+    },
+    {
+      "cachedNsPerLookup": 25.271654,
+      "uncachedNsPerLookup": 2226.168624
+    },
+    {
+      "uncachedNsPerLookup": 1456.009426,
+      "cachedNsPerLookup": 26.496174
+    },
+    {
+      "cachedNsPerLookup": 26.013338,
+      "uncachedNsPerLookup": 1179.560602
+    }
+  ]
+}

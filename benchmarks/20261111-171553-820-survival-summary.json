@@ -1,0 +1,762 @@
+{
+  "formatVersion": 1,
+  "startedUtc": "2026-11-11T17:15:53.820Z",
+  "scenario": "Survival",
+  "stopReason": "duration reached",
+  "requestedDurationSeconds": 60,
+  "measurement": "Intervals between Forge RenderTick START events; includes limiter and ticks. Not display presentation or input-to-photon latency.",
+  "definitions": "Average FPS \u003d 1e9 / mean(ns). 1% low \u003d 1e9 / mean(slowest ceil(N*0.01) intervals). Percentiles use nearest rank.",
+  "allFrames": {
+    "count": 342,
+    "averageFps": 5.6866591650804095,
+    "onePercentLowFps": 2.655776790268048,
+    "meanMs": 175.85017335672515,
+    "p50Ms": 168.413642,
+    "p95Ms": 236.069006,
+    "p99Ms": 306.788904,
+    "maxMs": 459.867183,
+    "standardDeviationMs": 37.37499425971044
+  },
+  "worldWithoutGui": {
+    "count": 342,
+    "averageFps": 5.6866591650804095,
+    "onePercentLowFps": 2.655776790268048,
+    "meanMs": 175.85017335672515,
+    "p50Ms": 168.413642,
+    "p95Ms": 236.069006,
+    "p99Ms": 306.788904,
+    "maxMs": 459.867183,
+    "standardDeviationMs": 37.37499425971044
+  },
+  "excludedFromGameplayCount": 0,
+  "metadata": {
+    "client": "Lilt 1.0.0 / Forge 14.23.5.2860 / Minecraft 1.12.2",
+    "profile": "imported",
+    "java": "1.8.0_512-b09",
+    "os": "Linux 6.18.57 amd64",
+    "logicalProcessors": 2,
+    "maxHeapBytes": 1908932608,
+    "glVendor": "Mesa",
+    "glRenderer": "llvmpipe (LLVM 19.1.7, 256 bits)",
+    "glVersion": "4.5 (Compatibility Profile) Mesa 25.0.7-2+deb13u1",
+    "displayWidth": 1440,
+    "displayHeight": 900,
+    "renderDistanceChunks": 16,
+    "fancyGraphics": true,
+    "ambientOcclusion": 2,
+    "particles": 0,
+    "mipmapLevels": 4,
+    "vsync": false,
+    "frameLimit": 260,
+    "renderClouds": 2,
+    "entityShadows": true,
+    "resourcePacks": [],
+    "singleplayer": true,
+    "textCacheEnabled": true,
+    "textCacheInstalled": true,
+    "configuration": {
+      "schemaVersion": 1,
+      "theme": "Dusk",
+      "primary": "67D1F5",
+      "secondary": "B5F8FF",
+      "showWithDebug": false,
+      "modules": {
+        "fps": {
+          "enabled": true,
+          "x": 0.00970432162284851,
+          "y": 0.0161479152739048,
+          "keybind": 0,
+          "appearance": {
+            "scale": 1.05,
+            "opacity": 0.92,
+            "padding": 8,
+            "radius": 6,
+            "borderWidth": 1,
+            "spacing": 3,
+            "fontSize": 11,
+            "font": "Open Sans",
+            "semibold": false,
+            "align": "LEFT",
+            "background": true,
+            "animate": true,
+            "animationSpeed": 1.0,
+            "foreground": "EAF5F9",
+            "backgroundColor": "182B36",
+            "borderColor": "385665",
+            "accent": "67D1F5"
+          }
+        },
+        "frame_time": {
+          "enabled": true,
+          "x": 0.012121211737394333,
+          "y": 0.27515047788619995,
+          "keybind": 0,
+          "appearance": {
+            "scale": 1.0,
+            "opacity": 0.92,
+            "padding": 8,
+            "radius": 6,
+            "borderWidth": 1,
+            "spacing": 3,
+            "fontSize": 11,
+            "font": "Open Sans",
+            "semibold": false,
+            "align": "LEFT",
+            "background": true,
+            "animate": true,
+            "animationSpeed": 1.0,
+            "foreground": "EAF5F9",
+            "backgroundColor": "182B36",
+            "borderColor": "385665",
+            "accent": "67D1F5"
+          }
+        },
+        "coordinates": {
+          "enabled": true,
+          "x": 0.011169284582138062,
+          "y": 0.5435651540756226,
+          "keybind": 0,
+          "appearance": {
+            "scale": 1.0,
+            "opacity": 0.92,
+            "padding": 8,
+            "radius": 6,
+            "borderWidth": 1,
+            "spacing": 3,
+            "fontSize": 11,
+            "font": "Open Sans",
+            "semibold": false,
+            "align": "LEFT",
+            "background": true,
+            "animate": true,
+            "animationSpeed": 1.0,
+            "foreground": "EAF5F9",
+            "backgroundColor": "182B36",
+            "borderColor": "385665",
+            "accent": "67D1F5"
+          }
+        },
+        "memory": {
+          "enabled": true,
+          "x": 0.010677344165742397,
+          "y": 0.7673860788345337,
+          "keybind": 0,
+          "appearance": {
+            "scale": 1.0,
+            "opacity": 0.68,
+            "padding": 8,
+            "radius": 6,
+            "borderWidth": 1,
+            "spacing": 3,
+            "fontSize": 11,
+            "font": "Open Sans",
+            "semibold": false,
+            "align": "LEFT",
+            "background": true,
+            "animate": true,
+            "animationSpeed": 1.0,
+            "foreground": "EAF5F9",
+            "backgroundColor": "182B36",
+            "borderColor": "385665",
+            "accent": "67D1F5"
+          }
+        },
+        "ping": {
+          "enabled": false,
+          "x": 0.02,
+          "y": 0.43000000000000005,
+          "keybind": 0,
+          "appearance": {
+            "scale": 1.0,
+            "opacity": 0.92,
+            "padding": 8,
+            "radius": 6,
+            "borderWidth": 1,
+            "spacing": 3,
+            "fontSize": 11,
+            "font": "Open Sans",
+            "semibold": false,
+            "align": "LEFT",
+            "background": true,
+            "animate": true,
+            "animationSpeed": 1.0,
+            "foreground": "EAF5F9",
+            "backgroundColor": "182B36",
+            "borderColor": "385665",
+            "accent": "67D1F5"
+          }
+        },
+        "session": {
+          "enabled": false,
+          "x": 0.02,
+          "y": 0.53,
+          "keybind": 0,
+          "appearance": {
+            "scale": 1.0,
+            "opacity": 0.92,
+            "padding": 8,
+            "radius": 6,
+            "borderWidth": 1,
+            "spacing": 3,
+            "fontSize": 11,
+            "font": "Open Sans",
+            "semibold": false,
+            "align": "LEFT",
+            "background": true,
+            "animate": true,
+            "animationSpeed": 1.0,
+            "foreground": "EAF5F9",
+            "backgroundColor": "182B36",
+            "borderColor": "385665",
+            "accent": "67D1F5"
+          }
+        },
+        "clock": {
+          "enabled": false,
+          "x": 0.02,
+          "y": 0.6300000000000001,
+          "keybind": 0,
+          "appearance": {
+            "scale": 1.0,
+            "opacity": 0.92,
+            "padding": 8,
+            "radius": 6,
+            "borderWidth": 1,
+            "spacing": 3,
+            "fontSize": 11,
+            "font": "Open Sans",
+            "semibold": false,
+            "align": "LEFT",
+            "background": true,
+            "animate": true,
+            "animationSpeed": 1.0,
+            "foreground": "EAF5F9",
+            "backgroundColor": "182B36",
+            "borderColor": "385665",
+            "accent": "67D1F5"
+          }
+        },
+        "keystrokes": {
+          "enabled": false,
+          "x": 0.02,
+          "y": 0.7300000000000001,
+          "keybind": 0,
+          "appearance": {
+            "scale": 1.0,
+            "opacity": 0.92,
+            "padding": 8,
+            "radius": 6,
+            "borderWidth": 1,
+            "spacing": 3,
+            "fontSize": 11,
+            "font": "Open Sans",
+            "semibold": false,
+            "align": "LEFT",
+            "background": true,
+            "animate": true,
+            "animationSpeed": 1.0,
+            "foreground": "EAF5F9",
+            "backgroundColor": "182B36",
+            "borderColor": "385665",
+            "accent": "67D1F5"
+          }
+        },
+        "brand": {
+          "enabled": false,
+          "x": 0.02,
+          "y": 0.8300000000000001,
+          "keybind": 0,
+          "appearance": {
+            "scale": 1.0,
+            "opacity": 0.92,
+            "padding": 8,
+            "radius": 6,
+            "borderWidth": 1,
+            "spacing": 3,
+            "fontSize": 11,
+            "font": "Open Sans",
+            "semibold": false,
+            "align": "LEFT",
+            "background": true,
+            "animate": true,
+            "animationSpeed": 1.0,
+            "foreground": "EAF5F9",
+            "backgroundColor": "182B36",
+            "borderColor": "385665",
+            "accent": "67D1F5"
+          }
+        },
+        "text_cache": {
+          "enabled": true,
+          "x": 0.02,
+          "y": 0.75,
+          "keybind": 0,
+          "appearance": {
+            "scale": 1.0,
+            "opacity": 0.92,
+            "padding": 8,
+            "radius": 6,
+            "borderWidth": 1,
+            "spacing": 3,
+            "fontSize": 11,
+            "font": "Open Sans",
+            "semibold": false,
+            "align": "LEFT",
+            "background": true,
+            "animate": true,
+            "animationSpeed": 1.0,
+            "foreground": "EAF5F9",
+            "backgroundColor": "182B36",
+            "borderColor": "385665",
+            "accent": "67D1F5"
+          }
+        }
+      }
+    }
+  },
+  "systemSamples": [
+    {
+      "elapsedSeconds": 0.182564073,
+      "heapUsedBytes": 839423096,
+      "heapCommittedBytes": 1269825536,
+      "processCpuPercentOfMachine": 97.95657540398456,
+      "gcCollectionsSinceStart": 0,
+      "gcMillisSinceStart": 0
+    },
+    {
+      "elapsedSeconds": 1.291715798,
+      "heapUsedBytes": 321852824,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 99.85310661583019,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 2.462630937,
+      "heapUsedBytes": 334629608,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 99.66075597663472,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 3.548511507,
+      "heapUsedBytes": 352042976,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 87.863743978861,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 4.701471581,
+      "heapUsedBytes": 363322512,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 93.49810903444207,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 6.042592921,
+      "heapUsedBytes": 379356992,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 100.0,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 7.143890049,
+      "heapUsedBytes": 402757448,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 98.88346038234728,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 8.180270223,
+      "heapUsedBytes": 420052024,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 99.4398870688631,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 9.241745685,
+      "heapUsedBytes": 443048552,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 98.22669629667121,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 10.260047933,
+      "heapUsedBytes": 460311752,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 99.89516195211694,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 11.457883325,
+      "heapUsedBytes": 486704896,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 100.0,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 12.554735264,
+      "heapUsedBytes": 497984440,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 98.41161326809494,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 13.597876196,
+      "heapUsedBytes": 516491144,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 100.0,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 14.630576026,
+      "heapUsedBytes": 529267848,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 99.63342888770322,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 15.634393763,
+      "heapUsedBytes": 543942112,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 97.38304174957075,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 16.781466664,
+      "heapUsedBytes": 572641056,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 99.48868874165365,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 17.943978184,
+      "heapUsedBytes": 594112808,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 99.6054351628987,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 18.958056497,
+      "heapUsedBytes": 609628544,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 100.0,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 20.110738139,
+      "heapUsedBytes": 621314096,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 98.71399853070301,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 21.294013716,
+      "heapUsedBytes": 625268480,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 98.43998015587624,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 22.363759244,
+      "heapUsedBytes": 644704672,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 99.50359948193073,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 23.545235366,
+      "heapUsedBytes": 648503384,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 99.4813972469427,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 24.562423385,
+      "heapUsedBytes": 677604504,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 100.0,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 25.663651507,
+      "heapUsedBytes": 697580792,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 99.30472592547517,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 26.740231495,
+      "heapUsedBytes": 707081896,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 99.70060867295447,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 27.788022443,
+      "heapUsedBytes": 720038584,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 98.21775470713963,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 28.840744042,
+      "heapUsedBytes": 726547016,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 100.0,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 29.954622261,
+      "heapUsedBytes": 739756976,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 98.74242298959234,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 30.998477629,
+      "heapUsedBytes": 756860616,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 100.0,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 32.073588519,
+      "heapUsedBytes": 778359952,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 100.0,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 33.188390645,
+      "heapUsedBytes": 801328976,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 99.24447492286275,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 34.348677354,
+      "heapUsedBytes": 815515608,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 97.6355654293055,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 35.388352806,
+      "heapUsedBytes": 832646048,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 99.56044243249805,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 36.583632834,
+      "heapUsedBytes": 840932936,
+      "heapCommittedBytes": 1200619520,
+      "processCpuPercentOfMachine": 98.4483932351465,
+      "gcCollectionsSinceStart": 1,
+      "gcMillisSinceStart": 151
+    },
+    {
+      "elapsedSeconds": 37.591700482,
+      "heapUsedBytes": 319568672,
+      "heapCommittedBytes": 1205862400,
+      "processCpuPercentOfMachine": 99.52341301028426,
+      "gcCollectionsSinceStart": 2,
+      "gcMillisSinceStart": 252
+    },
+    {
+      "elapsedSeconds": 38.597883362,
+      "heapUsedBytes": 326214760,
+      "heapCommittedBytes": 1205862400,
+      "processCpuPercentOfMachine": 99.2628359713669,
+      "gcCollectionsSinceStart": 2,
+      "gcMillisSinceStart": 252
+    },
+    {
+      "elapsedSeconds": 39.797796254,
+      "heapUsedBytes": 337518424,
+      "heapCommittedBytes": 1205862400,
+      "processCpuPercentOfMachine": 100.0,
+      "gcCollectionsSinceStart": 2,
+      "gcMillisSinceStart": 252
+    },
+    {
+      "elapsedSeconds": 40.863025895,
+      "heapUsedBytes": 351183776,
+      "heapCommittedBytes": 1205862400,
+      "processCpuPercentOfMachine": 93.91218316600006,
+      "gcCollectionsSinceStart": 2,
+      "gcMillisSinceStart": 252
+    },
+    {
+      "elapsedSeconds": 41.867331413,
+      "heapUsedBytes": 369871720,
+      "heapCommittedBytes": 1205862400,
+      "processCpuPercentOfMachine": 100.0,
+      "gcCollectionsSinceStart": 2,
+      "gcMillisSinceStart": 252
+    },
+    {
+      "elapsedSeconds": 42.950516496,
+      "heapUsedBytes": 394398864,
+      "heapCommittedBytes": 1205862400,
+      "processCpuPercentOfMachine": 99.69198371144482,
+      "gcCollectionsSinceStart": 2,
+      "gcMillisSinceStart": 252
+    },
+    {
+      "elapsedSeconds": 44.037940887,
+      "heapUsedBytes": 414500792,
+      "heapCommittedBytes": 1205862400,
+      "processCpuPercentOfMachine": 98.50898934485747,
+      "gcCollectionsSinceStart": 2,
+      "gcMillisSinceStart": 252
+    },
+    {
+      "elapsedSeconds": 45.1342558,
+      "heapUsedBytes": 432260896,
+      "heapCommittedBytes": 1205862400,
+      "processCpuPercentOfMachine": 99.84105491259892,
+      "gcCollectionsSinceStart": 2,
+      "gcMillisSinceStart": 252
+    },
+    {
+      "elapsedSeconds": 46.151158101,
+      "heapUsedBytes": 440698000,
+      "heapCommittedBytes": 1205862400,
+      "processCpuPercentOfMachine": 98.85318583270598,
+      "gcCollectionsSinceStart": 2,
+      "gcMillisSinceStart": 252
+    },
+    {
+      "elapsedSeconds": 47.256617828,
+      "heapUsedBytes": 452080224,
+      "heapCommittedBytes": 1205862400,
+      "processCpuPercentOfMachine": 98.98546352274953,
+      "gcCollectionsSinceStart": 2,
+      "gcMillisSinceStart": 252
+    },
+    {
+      "elapsedSeconds": 48.259217255,
+      "heapUsedBytes": 466456752,
+      "heapCommittedBytes": 1205862400,
+      "processCpuPercentOfMachine": 100.0,
+      "gcCollectionsSinceStart": 2,
+      "gcMillisSinceStart": 252
+    },
+    {
+      "elapsedSeconds": 49.344012097,
+      "heapUsedBytes": 475131480,
+      "heapCommittedBytes": 1205862400,
+      "processCpuPercentOfMachine": 93.6679285212909,
+      "gcCollectionsSinceStart": 2,
+      "gcMillisSinceStart": 252
+    },
+    {
+      "elapsedSeconds": 50.378086613,
+      "heapUsedBytes": 489507992,
+      "heapCommittedBytes": 1205862400,
+      "processCpuPercentOfMachine": 97.80899352283176,
+      "gcCollectionsSinceStart": 2,
+      "gcMillisSinceStart": 252
+    },
+    {
+      "elapsedSeconds": 51.554323553,
+      "heapUsedBytes": 504376040,
+      "heapCommittedBytes": 1205862400,
+      "processCpuPercentOfMachine": 100.0,
+      "gcCollectionsSinceStart": 2,
+      "gcMillisSinceStart": 252
+    },
+    {
+      "elapsedSeconds": 52.710150151,
+      "heapUsedBytes": 530484728,
+      "heapCommittedBytes": 1205862400,
+      "processCpuPercentOfMachine": 99.64948477165943,
+      "gcCollectionsSinceStart": 2,
+      "gcMillisSinceStart": 252
+    },
+    {
+      "elapsedSeconds": 53.869276708,
+      "heapUsedBytes": 545781024,
+      "heapCommittedBytes": 1205862400,
+      "processCpuPercentOfMachine": 98.51823035646937,
+      "gcCollectionsSinceStart": 2,
+      "gcMillisSinceStart": 252
+    },
+    {
+      "elapsedSeconds": 54.991107248,
+      "heapUsedBytes": 560690568,
+      "heapCommittedBytes": 1205862400,
+      "processCpuPercentOfMachine": 100.0,
+      "gcCollectionsSinceStart": 2,
+      "gcMillisSinceStart": 252
+    },
+    {
+      "elapsedSeconds": 56.144484423,
+      "heapUsedBytes": 573590152,
+      "heapCommittedBytes": 1205862400,
+      "processCpuPercentOfMachine": 99.4229717839859,
+      "gcCollectionsSinceStart": 2,
+      "gcMillisSinceStart": 252
+    },
+    {
+      "elapsedSeconds": 57.238198577,
+      "heapUsedBytes": 578549888,
+      "heapCommittedBytes": 1205862400,
+      "processCpuPercentOfMachine": 99.60929576902856,
+      "gcCollectionsSinceStart": 2,
+      "gcMillisSinceStart": 252
+    },
+    {
+      "elapsedSeconds": 58.377342865,
+      "heapUsedBytes": 591252840,
+      "heapCommittedBytes": 1205862400,
+      "processCpuPercentOfMachine": 99.89562459097155,
+      "gcCollectionsSinceStart": 2,
+      "gcMillisSinceStart": 252
+    },
+    {
+      "elapsedSeconds": 59.448192751,
+      "heapUsedBytes": 603109816,
+      "heapCommittedBytes": 1205862400,
+      "processCpuPercentOfMachine": 99.22190615554811,
+      "gcCollectionsSinceStart": 2,
+      "gcMillisSinceStart": 252
+    }
+  ],
+  "gpuUtilization": "Not available from portable LWJGL 2 APIs. Use external vendor counters.",
+  "inputLatency": "Not measured. Use an external high-speed camera or validated latency instrument.",
+  "gcNote": "MXBean aggregate collection count/time, sampled at 1 Hz; not individual stop-the-world pause durations."
+}

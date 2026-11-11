@@ -1,0 +1,184 @@
+{
+  "runs": {
+    "forge-coast-1": {
+      "frames": 233,
+      "excluded": 0,
+      "measuredSeconds": 30.022742915,
+      "averageFps": 7.760783238882156,
+      "onePercentLowFps": 4.869320187553878,
+      "meanMs": 128.85297388412016,
+      "p50Ms": 120.450606,
+      "p95Ms": 164.724713,
+      "p99Ms": 198.817901,
+      "maxMs": 216.237947,
+      "standardDeviationMs": 20.92647318062802,
+      "system": {
+        "samples": 30,
+        "cpuMeanPercentOfJvmProcessors": 99.08857586206896,
+        "heapMeanMiB": 559.8814501444499,
+        "heapPeakMiB": 817.6781463623047,
+        "gcCollectionsBetweenFirstAndLastSample": 1,
+        "gcMillisBetweenFirstAndLastSample": 45,
+        "systemObservationSeconds": 29.023285
+      }
+    },
+    "lilt-coast-1": {
+      "frames": 237,
+      "excluded": 0,
+      "measuredSeconds": 30.002630374,
+      "averageFps": 7.899307395573622,
+      "onePercentLowFps": 5.505214154399592,
+      "meanMs": 126.59337710548523,
+      "p50Ms": 117.97081,
+      "p95Ms": 166.301945,
+      "p99Ms": 175.355042,
+      "maxMs": 192.137683,
+      "standardDeviationMs": 19.551761064144557,
+      "system": {
+        "samples": 30,
+        "cpuMeanPercentOfJvmProcessors": 99.41901379310345,
+        "heapMeanMiB": 528.259359995524,
+        "heapPeakMiB": 753.1932601928711,
+        "gcCollectionsBetweenFirstAndLastSample": 1,
+        "gcMillisBetweenFirstAndLastSample": 6,
+        "systemObservationSeconds": 29.000363
+      }
+    },
+    "lilt-coast-2": {
+      "frames": 234,
+      "excluded": 0,
+      "measuredSeconds": 30.116841112,
+      "averageFps": 7.769739167855925,
+      "onePercentLowFps": 4.474817944120192,
+      "meanMs": 128.7044491965812,
+      "p50Ms": 117.601869,
+      "p95Ms": 173.544899,
+      "p99Ms": 186.020753,
+      "maxMs": 288.265642,
+      "standardDeviationMs": 23.90838773385285,
+      "system": {
+        "samples": 30,
+        "cpuMeanPercentOfJvmProcessors": 98.93777931034482,
+        "heapMeanMiB": 571.5578076680501,
+        "heapPeakMiB": 789.7893753051758,
+        "gcCollectionsBetweenFirstAndLastSample": 1,
+        "gcMillisBetweenFirstAndLastSample": 68,
+        "systemObservationSeconds": 28.999978
+      }
+    },
+    "lilt-coast-3": {
+      "frames": 244,
+      "excluded": 0,
+      "measuredSeconds": 30.090169914,
+      "averageFps": 8.108960524230026,
+      "onePercentLowFps": 4.975555460894691,
+      "meanMs": 123.3203685,
+      "p50Ms": 115.091084,
+      "p95Ms": 161.964415,
+      "p99Ms": 183.249157,
+      "maxMs": 228.329172,
+      "standardDeviationMs": 20.729382338497427,
+      "system": {
+        "samples": 30,
+        "cpuMeanPercentOfJvmProcessors": 99.4048448275862,
+        "heapMeanMiB": 580.6390350341796,
+        "heapPeakMiB": 801.3423843383789,
+        "gcCollectionsBetweenFirstAndLastSample": 1,
+        "gcMillisBetweenFirstAndLastSample": 25,
+        "systemObservationSeconds": 28.98886
+      }
+    },
+    "vanilla-coast-1": {
+      "frames": 217,
+      "excluded": 0,
+      "measuredSeconds": 30.123970051,
+      "averageFps": 7.203565786070632,
+      "onePercentLowFps": 4.04555211853239,
+      "meanMs": 138.82013848387095,
+      "p50Ms": 130.223375,
+      "p95Ms": 191.650102,
+      "p99Ms": 219.549572,
+      "maxMs": 268.097192,
+      "standardDeviationMs": 27.215526813422887,
+      "system": {
+        "samples": 30,
+        "cpuMeanPercentOfJvmProcessors": 98.86349310344828,
+        "heapMeanMiB": 518.1268160502116,
+        "heapPeakMiB": 719.9857330322266,
+        "gcCollectionsBetweenFirstAndLastSample": 0,
+        "gcMillisBetweenFirstAndLastSample": 0,
+        "systemObservationSeconds": 28.999041000000002
+      }
+    },
+    "vanilla-coast-2": {
+      "frames": 217,
+      "excluded": 0,
+      "measuredSeconds": 30.15591149,
+      "averageFps": 7.195935698112105,
+      "onePercentLowFps": 3.7465128862996657,
+      "meanMs": 138.96733405529955,
+      "p50Ms": 127.882482,
+      "p95Ms": 184.82044,
+      "p99Ms": 231.696607,
+      "maxMs": 316.752641,
+      "standardDeviationMs": 26.025489042792955,
+      "system": {
+        "samples": 31,
+        "cpuMeanPercentOfJvmProcessors": 99.23576333333334,
+        "heapMeanMiB": 567.4195866738596,
+        "heapPeakMiB": 749.8912811279297,
+        "gcCollectionsBetweenFirstAndLastSample": 1,
+        "gcMillisBetweenFirstAndLastSample": 16,
+        "systemObservationSeconds": 29.999876999999998
+      }
+    },
+    "vanilla-coast-3": {
+      "frames": 204,
+      "excluded": 0,
+      "measuredSeconds": 30.110294561,
+      "averageFps": 6.7750914753331095,
+      "onePercentLowFps": 3.982509212479698,
+      "meanMs": 147.59948314215686,
+      "p50Ms": 142.159892,
+      "p95Ms": 202.987922,
+      "p99Ms": 243.404535,
+      "maxMs": 261.896459,
+      "standardDeviationMs": 26.222870009087668,
+      "system": {
+        "samples": 30,
+        "cpuMeanPercentOfJvmProcessors": 99.4050827586207,
+        "heapMeanMiB": 540.6586781819661,
+        "heapPeakMiB": 744.0633316040039,
+        "gcCollectionsBetweenFirstAndLastSample": 1,
+        "gcMillisBetweenFirstAndLastSample": 13,
+        "systemObservationSeconds": 28.997529
+      }
+    }
+  },
+  "groups": {
+    "vanilla": {
+      "runs": 3,
+      "medianAverageFps": 7.195935698112105,
+      "minimumAverageFps": 6.7750914753331095,
+      "maximumAverageFps": 7.203565786070632,
+      "medianOnePercentLowFps": 3.982509212479698,
+      "medianP99Ms": 231.696607
+    },
+    "lilt": {
+      "runs": 3,
+      "medianAverageFps": 7.899307395573622,
+      "minimumAverageFps": 7.769739167855925,
+      "maximumAverageFps": 8.108960524230026,
+      "medianOnePercentLowFps": 4.975555460894691,
+      "medianP99Ms": 183.249157
+    },
+    "forge": {
+      "runs": 1,
+      "medianAverageFps": 7.760783238882156,
+      "minimumAverageFps": 7.760783238882156,
+      "maximumAverageFps": 7.760783238882156,
+      "medianOnePercentLowFps": 4.869320187553878,
+      "medianP99Ms": 198.817901
+    }
+  }
+}
